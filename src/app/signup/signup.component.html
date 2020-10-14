@@ -1,0 +1,53 @@
+<div class="signup-page">
+    <div class="overlay"></div>
+    <div class="form-container">
+        <h1>LOGO</h1>
+        <h3>Sign Up</h3>
+        <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+            <input
+                type="text"
+                id="firstname"
+                placeholder="Firstname"
+                class="form-control"
+                formControlName="firstname"
+            />
+            
+            <input
+                type="text"
+                id="lastname"
+                placeholder="Lastname"
+                class="form-control"
+                formControlName="lastname"
+            />
+            
+            <input
+                type="text"
+                id="email"
+                placeholder="email"
+                class="form-control"
+                formControlName="email"
+            />
+            
+            <input
+                type="password"
+                id="password"
+                placeholder="Password"
+                class="form-control"
+                formControlName="password"
+            />
+            
+            <input
+                type="password"
+                id="confirmPassword"
+                placeholder="Confirm Password"
+                class="form-control"
+                formControlName="confirmPassword"
+            />
+            
+            <div>
+                <button class="btn btn-primary" type="submit">Submit</button>
+            </div>
+            
+        </form>
+    </div>
+</div>
