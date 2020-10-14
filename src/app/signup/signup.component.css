@@ -1,0 +1,56 @@
+.signup-page {
+    
+    background: url('../../assets/bg6.jpg') center center/cover no-repeat;
+}
+
+.overlay {
+    background: rgba(0, 0, 0, 0.3);
+    height: 90vh;
+}
+
+h1, h3 {
+    margin-bottom: 1rem;
+}
+
+.form-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2rem;
+    min-width: 20rem;
+    background: rgba(255, 255, 255, 0.8);
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+}
+
+.form-control {
+    margin: 0.3rem 0 0.6rem 0;
+    outline: none;
+    padding: 10px 5px;
+    border: 1px solid #a3a3a3;
+    border-radius: 5px;
+    background: transparent;
+    font-size: 0.9rem;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #df4550;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 0.3rem;
+}
+
+button:hover {
+    background: #ff0019;
+    cursor: pointer;
+}

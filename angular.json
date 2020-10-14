@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "ecom-website"
+    }
+  },
+  "defaultProject": "ecom-website",
+  "cli": {
+    "analytics": false
+  }
 }

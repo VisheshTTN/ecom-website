@@ -1,0 +1,20 @@
+<div class="container" > 
+    <div class="product-container" *ngFor="let product of products">
+        <a href="#" [routerLink]="['/products', product.id]">
+            <div class="img-container">
+                <img [src]="product.img" alt=""/>
+            </div>
+            <div class="product-info">
+                <h3>{{ product.name }}</h3>
+                <p>Rs. {{ product.price }}</p>
+            </div>  
+            <div>
+                <button onClick={props.handleAddCart} class="add-btn">
+                    <div>+</div>
+                </button>
+            </div>
+        </a>
+        
+    </div>
+</div>
+

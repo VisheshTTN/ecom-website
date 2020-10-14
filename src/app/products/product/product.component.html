@@ -1,0 +1,26 @@
+<div class="product-container">
+    <div class="product-img">
+            <img class="main-image" [src]="thumbImg" alt="">
+        <div class="img-gallery" >
+            <img *ngFor="let image of product.gallery" [src]="image.imgUrl" (click)="onChangeImage(image.imgId)" alt="">
+        </div>
+    </div>
+    <div class="product-info">
+        <h1>{{ product.name }}</h1>
+        <hr/>
+        <div class="shop">
+            <h2>Rs. {{ product.price }} </h2>
+            <div>
+                <button>Add To Cart</button>
+            </div>
+        </div>
+        
+        <hr/>
+        <h3>Product Description</h3>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi, laboriosam. Placeat perspiciatis numquam libero iste veniam dolores blanditiis perferendis quis ullam voluptatum, odio architecto obcaecati, aliquam vel voluptatibus autem unde?
+        Maiores doloremque quas laboriosam voluptates, aperiam molestiae quam placeat dolorem debitis reiciendis! Quis vero, molestias impedit debitis totam nesciunt modi perspiciatis sit aut ipsam, nam omnis recusandae architecto sint? Perferendis?
+        de recusandae hic quia ab distinctio dolorum, eos sit non pariatur sequi ipsam quibusdam aliquam iste. Incidunt adipisci maxime minus voluptas unde voluptatibus quam et soluta temporibus. Consequatur, quasi provident?
+        animi libero? Ipsa id vero asperiores at ullam eum inventore illo obcaecati maiores? Aspernatur tenetur qui nam amet, eos nobis quibusdam sequi consequatur perspiciatis, voluptas necessitatibus! Asperiores, aperiam quam.</p>
+    </div>
+
+</div>
