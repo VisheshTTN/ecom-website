@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
+import { CartService } from 'src/app/cart/cart.service';
 import { ProductsService } from '../products.service';
 
 @Component({
@@ -12,7 +13,7 @@ export class ProductComponent implements OnInit {
   product: any;
   thumbImg: string;
 
-  constructor(private productsService: ProductsService, private route: ActivatedRoute) { }
+  constructor(private productsService: ProductsService, private cartService: CartService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     const id = +this.route.snapshot.params['id'];
@@ -28,6 +29,10 @@ export class ProductComponent implements OnInit {
   onChangeImage(id: number) {
     let image = this.product.gallery.find(image=> image.imgId === id);
     this.thumbImg = image.imgUrl;
+  }
+
+  onAddToCart(id: number) {
+    this.cartService.addProductToCart(id);
   }
  
 }

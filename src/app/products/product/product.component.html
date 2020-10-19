@@ -11,7 +11,11 @@
         <div class="shop">
             <h2>Rs. {{ product.price }} </h2>
             <div>
-                <button>Add To Cart</button>
+                <button class="cart-btn" (click)="onAddToCart(product.id)" *ngIf="!product.quantity; else goToCart" >ADD TO CART</button>
+                <ng-template #goToCart>   
+                    <a href="" class="cart-btn" routerLink="/your-cart">GO TO CART</a>
+                </ng-template>
+                
             </div>
         </div>
         

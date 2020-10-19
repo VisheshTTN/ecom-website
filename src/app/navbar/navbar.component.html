@@ -3,9 +3,17 @@
         <h2>LOGO</h2>
     </a>
     <ul class="nav-links">
-        <li><a href="">Home</a></li>
+        <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a href="#" routerLink="/">Home</a></li>
         <li><a href="">About</a></li>
         <li><a href="">Help</a></li>
-        <li><a href="#" routerLink="/signup">Login/Signup</a></li>
+        <li routerLinkActive="active"><a href="#" routerLink="/signup">Login/Signup</a></li>
+        <li class="nav-cart" routerLinkActive="active">
+            <a href="#" routerLink="/your-cart">
+                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                <div *ngIf="itemsInCart.length" class="cart-dot">
+                    <h4>{{ itemsInCart.length }}</h4>
+                </div>
+            </a>
+        </li>
     </ul>
 </div>

@@ -1,0 +1,65 @@
+<div class="container">
+    <h2>Your Cart</h2>
+    
+    <div class="order-container" *ngIf="cart.length; else emptyCart">
+        <div style="display: flex; flex-direction: column; flex-basis: 65%; align-self: flex-start;">
+        <div style="display: flex; flex-direction: column;">
+            <div class="product" *ngFor="let product of cart">
+                <div class="product-container">
+                    <img [src]="product.img" alt=""/>
+                    <div class="product-details">
+                        <h3>{{ product.name }}</h3>
+                        <span>Price:</span> <h3>Rs {{ product.price }}</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="proceed-btn" style="text-align: right;">
+            <a href="#" routerLink="/shipping-details">Proceed</a>
+        </div>
+        </div>
+        
+        <div class="order-summary">
+            <h3>Order Summary</h3>
+            <div class="order-container" *ngFor="let product of cart"> 
+                <div class="product-container" >
+                    <img [src]="product.img" alt=""/>
+                    <div class="product-details">
+                        <h3>{{ product.name }}</h3>
+                        <p>Quantity: {{ product.quantity }}</p>
+                        <p>Price: Rs. {{ product.price }}</p>
+                    </div>
+                </div>
+                <div class="price">
+                    <h3>Rs. {{ product.price }}</h3>
+                </div>
+            </div>
+            <div class="price-calculation">
+                <div>
+                    <div>
+                        <p>SUBTOTAL</p>
+                        <p>DELIVERY</p>
+                        <p>DISCOUNT</p>
+                    </div>    
+                    <div>
+                        <p>Rs {{ cartValue }}</p>
+                        <p>0</p>
+                        <p>0</p>
+                    </div>
+                </div>
+                <div class="total-price">
+                    <p>TOTAL</p>
+                    <p>Rs. {{ cartValue }}</p>
+                </div>
+                
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<ng-template #emptyCart>
+    <div class="empty-cart">
+        <p>Your Cart is empty.....<a href="" routerLink="/">Browse Products</a> </p>
+    </div>
+</ng-template>

@@ -2,7 +2,7 @@ import { Injectable } from "@angular/core";
 
 @Injectable({providedIn: 'root'})
 export class ProductsService {
-    products = [
+    private products = [
         {
           "id": 1,
           "name": "Camera",
@@ -162,5 +162,12 @@ export class ProductsService {
     getProduct(id: number) {
       const product = this.products.find(p=> p.id == id);
       return product;
+    }
+
+    getSearchedProducts(name: string) {
+      const searchedProducts = this.products.filter(product=> {
+        return product.name.toLowerCase().includes(name.toLowerCase());
+      });
+      return searchedProducts;
     }
 }

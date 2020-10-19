@@ -1,0 +1,46 @@
+.order-complete {
+    padding: 7rem 0;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    min-height: 90vh;
+}
+
+.order-complete h2 {
+    font-size: 2.5rem;
+}
+
+.complete-msg {
+    width: 50%;
+    margin: 0 auto;
+}
+
+p {
+    color: rgb(97, 96, 96);
+    margin: 2rem 0 3rem 0;
+}
+
+.continue-shop-btn {
+    padding: 15px 20px;
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    background: #df4550;
+    font-size: 20px;
+}
+
+.continue-shop-btn:hover {
+    transition: all 0.4s;
+    transform: translate(-5px, -5px);
+    box-shadow: 10px 10px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 500px) {
+    .order-complete h2 {
+        font-size: 2rem;
+    }
+
+    .complete-msg {
+        width: 90%;
+    }
+}

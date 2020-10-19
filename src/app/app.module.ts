@@ -10,6 +10,11 @@ import { FooterComponent } from './footer/footer.component';
 import { SignupComponent } from './signup/signup.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProductComponent } from './products/product/product.component';
+import { CartComponent } from './cart/cart.component';
+import { SearchComponent } from './search/search.component';
+import { ShippingDetailsComponent } from './shipping-details/shipping-details.component';
+import { OrderCompleteComponent } from './order-complete/order-complete.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +24,12 @@ import { ProductComponent } from './products/product/product.component';
     ProductsComponent,
     FooterComponent,
     SignupComponent,
-    ProductComponent
+    ProductComponent,
+    CartComponent,
+    SearchComponent,
+    ShippingDetailsComponent,
+    OrderCompleteComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

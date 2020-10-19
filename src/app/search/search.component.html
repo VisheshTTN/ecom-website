@@ -1,0 +1,25 @@
+<div class="container">
+<div class="product-container" *ngFor="let product of searchedProducts">
+    <a href="#" [routerLink]="['/products', product.id]">
+        <div class="img-container">
+            <img [src]="product.img" alt=""/>
+        </div>
+        <div class="product-info">
+            <h3>{{ product.name }}</h3>
+            <p>Rs. {{ product.price }} </p>
+        </div>  
+    </a>
+    <div>
+        <a href="" routerLink="/your-cart" *ngIf="product.quantity; else addToCartBtn" class="check-btn">
+            <i class="fa fa-check check-icon" aria-hidden="true"></i>
+        </a>
+        <ng-template #addToCartBtn>
+            <button (click)="addToCart(product.id)" class="add-btn">
+                <div>+</div>
+            </button>
+        </ng-template>
+        
+    </div>
+    
+</div>
+</div>

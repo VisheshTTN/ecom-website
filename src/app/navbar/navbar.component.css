@@ -43,3 +43,41 @@ a {
 .nav-links li a {
     font-size: 1.3rem;
 }
+
+.nav-links li a:hover {
+    color: #df4550;
+}
+
+.nav-links li.active a{
+    color: #df4550;
+    border-bottom: 1px solid #df4550;
+}
+
+.nav-cart {
+    position: relative;
+}
+
+.nav-cart i {
+    font-size: 2rem;
+}
+
+.cart-dot {
+    position: absolute;
+    top: 0px;
+    right: -6px;
+    background-color: #df4550;
+    padding: 1px;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.cart-dot h4 {
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
