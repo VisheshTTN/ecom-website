@@ -1,7 +1,7 @@
 <div class="container">
     <h3>SHIPPING DETAILS</h3>
 
-    <form [formGropup]="shippingForm" (ngSubmit)="onSubmit()">
+    <form [formGroup]="shippingForm" (ngSubmit)="onCompleteOrder()">
         <div class="address-form grid-form">
             <input
             type="text"

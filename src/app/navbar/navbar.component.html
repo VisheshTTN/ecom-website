@@ -6,7 +6,12 @@
         <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a href="#" routerLink="/">Home</a></li>
         <li><a href="">About</a></li>
         <li><a href="">Help</a></li>
-        <li routerLinkActive="active"><a href="#" routerLink="/signup">Login/Signup</a></li>
+        <li routerLinkActive="active">
+            <a *ngIf="!loggedIn; logout" href="#" routerLink="/signup">Login/Signup</a>
+            <ng-template #logout>
+                <a href="#" routerLink="/signup">Logout</a>
+            </ng-template>
+        </li>
         <li class="nav-cart" routerLinkActive="active">
             <a href="#" routerLink="/your-cart">
                 <i class="fa fa-shopping-cart" aria-hidden="true"></i>
@@ -16,4 +21,10 @@
             </a>
         </li>
     </ul>
+    <div *ngIf="!showDrawer" class="menu-bar">
+        <button (click)="openDrawer()">
+            <i class="fa fa-bars"></i>
+        </button>
+    </div>
+    <app-drawer *ngIf="showDrawer" [closeDrawer]="closeDrawer"></app-drawer>
 </div>

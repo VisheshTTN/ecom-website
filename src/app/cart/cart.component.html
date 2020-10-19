@@ -2,7 +2,7 @@
     <h2>Your Cart</h2>
     
     <div class="order-container" *ngIf="cart.length; else emptyCart">
-        <div style="display: flex; flex-direction: column; flex-basis: 65%; align-self: flex-start;">
+        <div class="product-box">
         <div style="display: flex; flex-direction: column;">
             <div class="product" *ngFor="let product of cart">
                 <div class="product-container">

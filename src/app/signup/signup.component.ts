@@ -10,21 +10,23 @@ import { UsersService } from '../users.service';
 export class SignupComponent implements OnInit {
 
   signupForm: FormGroup;
+  message = '';
 
   constructor(private usersService: UsersService) { }
 
   ngOnInit(): void {
     this.signupForm = new FormGroup({
-      'firstname': new FormControl(null, Validators.required),
-      'lastname': new FormControl(null, Validators.required),
+      'name': new FormControl(null, Validators.required),
       'email': new FormControl(null, [Validators.required, Validators.email]),
-      'password': new FormControl(null),
-      'confirmPassword': new FormControl(null)
+      'password': new FormControl(null)
     });
   }
 
   onSubmit() {
-    this.usersService.addUser(this.signupForm.value);
+    this.usersService.addUser(this.signupForm.value)
+      .catch(err=>{
+        this.message = err.message;
+      })
   }
 
 }

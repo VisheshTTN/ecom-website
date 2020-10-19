@@ -1,0 +1,21 @@
+<div
+      class="drawer"
+      
+    >
+      <ul class="drawer_list">
+        <button class="close_btn" (click)="onCloseDrawer()">
+          X
+        </button>
+        <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+            <a href="#" class="nav-item" routerLink="/">Home</a>
+        </li>
+        <li><a href="" class="nav-item" >About</a></li>
+        <li><a href="" class="nav-item" >Help</a></li>
+        <li routerLinkActive="active">
+            <a *ngIf="!loggedIn; logout" href="#" class="nav-item" routerLink="/signup">Login/Signup</a>
+            <ng-template #logout>
+                <a href="#" class="nav-item" routerLink="/signup">Logout</a>
+            </ng-template>
+        </li>
+      </ul>
+    </div>

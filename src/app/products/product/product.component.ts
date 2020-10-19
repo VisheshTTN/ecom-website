@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { CartService } from 'src/app/cart/cart.service';
+import { Product } from '../products.interface';
 import { ProductsService } from '../products.service';
 
 @Component({
@@ -10,7 +11,7 @@ import { ProductsService } from '../products.service';
 })
 export class ProductComponent implements OnInit {
 
-  product: any;
+  product: Product;
   thumbImg: string;
 
   constructor(private productsService: ProductsService, private cartService: CartService, private route: ActivatedRoute) { }
@@ -34,5 +35,5 @@ export class ProductComponent implements OnInit {
   onAddToCart(id: number) {
     this.cartService.addProductToCart(id);
   }
- 
+
 }

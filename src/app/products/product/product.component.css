@@ -79,3 +79,14 @@ p {
     color: #808080;
     line-height: 1.4rem;
 }
+
+@media(max-width: 768px) {
+    .product-container {
+        flex-direction: column;
+    }
+
+    .product-container > div {
+        width: 100%;
+        margin: 0;
+    }
+}

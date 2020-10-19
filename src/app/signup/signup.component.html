@@ -2,22 +2,14 @@
     <div class="overlay"></div>
     <div class="form-container">
         <h1>LOGO</h1>
-        <h3>Login</h3>
+        <h3>Sign Up</h3>
         <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
             <input
                 type="text"
-                id="firstname"
-                placeholder="Firstname"
+                id="name"
+                placeholder="Your Name"
                 class="form-control"
-                formControlName="firstname"
-            />
-            
-            <input
-                type="text"
-                id="lastname"
-                placeholder="Lastname"
-                class="form-control"
-                formControlName="lastname"
+                formControlName="name"
             />
             
             <input
@@ -36,20 +28,13 @@
                 formControlName="password"
             />
             
-            <input
-                type="password"
-                id="confirmPassword"
-                placeholder="Confirm Password"
-                class="form-control"
-                formControlName="confirmPassword"
-            />
-            
             <div>
                 <button class="btn btn-primary" type="submit">Submit</button>
             </div>
             
         </form>
-        <p>Already Registered? </p>
+        <p>{{ message }}</p>
+        <p>Already Registered? <a href="#" routerLink="/login">Login</a></p>
     </div>
 
 </div>

@@ -10,7 +10,7 @@ export class UsersService {
         }
     ]
 
-    loggedIn = false;
+    loggedIn = true;
 
     checkUserDetails(email: string, password: string) {
         let authenticated = this.users.find(user=> {
@@ -28,7 +28,28 @@ export class UsersService {
         return this.loggedIn;
     }
 
-    addUser(user: any) {
-        this.users.push(...user);
+    addUser(user: {name: string, email: string, password: string }) {
+        const promise = new Promise(
+            (resolve, reject) => {
+                
+                let existingUser = this.users.find(existingUser=> {
+                    return existingUser.email === user.email
+                });
+                
+                if(existingUser) {
+                    reject({message: 'User already exists!'});
+                }
+                else{
+                    this.users.push({...user});
+                    resolve(this.users);
+                }
+            }
+        )
+        return promise;
+    }
+
+    logout() {
+        this.loggedIn = false;
+        return this.loggedIn;
     }
 }

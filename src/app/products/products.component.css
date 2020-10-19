@@ -112,4 +112,9 @@ img {
     transform-origin: 100% 100%;
 }
 
+@media(max-width: 768px) {
+    .container {
+        max-width: 700px;
+    }
+}
 

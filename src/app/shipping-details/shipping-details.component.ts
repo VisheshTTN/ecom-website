@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { CartService } from '../cart/cart.service';
 
 @Component({
   selector: 'app-shipping-details',
@@ -11,7 +12,7 @@ export class ShippingDetailsComponent implements OnInit {
 
   shippingForm: FormGroup;
 
-  constructor(private router: Router) { }
+  constructor(private cartService: CartService, private router: Router) { }
 
   ngOnInit(): void {
     this.shippingForm = new FormGroup({
@@ -27,7 +28,7 @@ export class ShippingDetailsComponent implements OnInit {
   }
 
   onCompleteOrder() {
-    console.log('here');
+    this.cartService.clearCart();
     this.router.navigate(['/order-complete']);
   }
 

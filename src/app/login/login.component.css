@@ -48,9 +48,32 @@ button {
     font-size: 1rem;
     font-weight: 600;
     border-radius: 0.3rem;
+    outline: none;
 }
 
 button:hover {
     background: #ff0019;
     cursor: pointer;
+}
+
+.form-container p {
+    margin-top: 20px;
+}
+
+.form-container p:first-of-type{
+    color: #ff0019;
+}
+
+.form-container p a{
+    text-decoration: none;
+    color: #df4550;
+    font-size: 18px;
+}
+
+.form-container p a:hover {
+    text-decoration: underline;
+}
+
+.form-control.ng-invalid.ng-touched {
+    border: 1px solid #ff0019;
 }

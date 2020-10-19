@@ -81,3 +81,27 @@ a {
     top: 50%;
     transform: translate(-50%, -50%);
 }
+
+.menu-bar {
+    display: none;
+}
+
+.menu-bar i {
+    font-size: 1.3rem;
+}
+
+.menu-bar button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+@media(max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .menu-bar {
+        display: block;
+    }
+}
