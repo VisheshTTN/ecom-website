@@ -1,0 +1,32 @@
+.pop-up {
+    position: fixed;
+    z-index: 200;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #ffffff;
+    padding: 30px 40px;
+}
+
+.pop-up p {
+    font-size: 20px;
+}
+
+.pop-up button {
+    display: block;
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    background: #df4550;
+    color: #ffffff;
+    font-size: 16px;
+    margin: 0 auto;
+    margin-top: 20px;
+    border-radius: 7px;
+    font-weight: 700;
+}
+
+.pop-up button:hover {
+    cursor: pointer;
+    background: #ff0019;
+}

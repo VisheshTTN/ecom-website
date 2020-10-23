@@ -3,56 +3,128 @@
 
     <form [formGroup]="shippingForm" (ngSubmit)="onCompleteOrder()">
         <div class="address-form grid-form">
-            <input
-            type="text"
-            placeholder="First Name*"
-            formControlName="firstname"
+            <div>
+                <input
+                    type="text"
+                    placeholder="First Name*"
+                    formControlName="firstname"
+                />
+                <p
+                    *ngIf="!shippingForm.get('firstname').valid && shippingForm.get('firstname').touched"
+                    class="input-error-msg"
+                >
+                    This field is required!
+                </p>
+            </div>
+            
+            <div>
+                <input
+                    type="text"
+                    placeholder="Last Name*"
+                    formControlName="lastname"
+                />
+                <p
+                    *ngIf="!shippingForm.get('lastname').valid && shippingForm.get('lastname').touched"
+                    class="input-error-msg"
+                >
+                    This field is required!
+                </p>
+            </div>
+            
+            <div>
+                <input
+                type="text"
+                placeholder="Address Line 1*"
+                formControlName="addressLine1"
+                />
+                <p
+                    *ngIf="!shippingForm.get('addressLine1').valid && shippingForm.get('addressLine1').touched"
+                    class="input-error-msg"
+                >
+                    This field is required!
+                </p>
+            </div>
+            
+            <div>
+                <input
+                type="text"
+                placeholder="Address Line 2"
+                formControlName="addressLine2"
             />
-            <input
-            type="text"
-            placeholder="Last Name*"
-            formControlName="lastname"
-            />
-            <input
-            type="text"
-            placeholder="Address Line 1*"
-            formControlName="addressLine1"
-            />
-            <input
-            type="text"
-            placeholder="Address Line 2"
-            formControlName="addressLine2"
-            />
-            <input
-            type="text"
-            placeholder="Country*"
-            formControlName="country"
-            />
-            <input
-            type="text"
-            placeholder="City*"
-            formControlName="city"
-            />
-            <input
-                type="number"
-                placeholder="Zip/Postal Code*"
-                formControlName="zip"
-            />
-            <input
-            type="number"
-            placeholder="Phone Number*"
-            formControlName="phone"
-            />
+            </div>
+            
+            <div>
+                <input
+                type="text"
+                placeholder="Country*"
+                formControlName="country"
+                />
+                <p
+                    *ngIf="!shippingForm.get('country').valid && shippingForm.get('country').touched"
+                    class="input-error-msg"
+                >
+                    This field is required!
+                </p>
+            </div>
+            
+            <div>
+                <input
+                    type="text"
+                    placeholder="City*"
+                    formControlName="city"
+                />
+                <p
+                    *ngIf="!shippingForm.get('city').valid && shippingForm.get('city').touched"
+                    class="input-error-msg"
+                >
+                This field is required!
+                </p>
+            </div>
+            
+            <div>
+                <input
+                    type="number"
+                    placeholder="Zip/Postal Code*"
+                    formControlName="zip"
+                />
+                <p
+                    *ngIf="!shippingForm.get('zip').valid && shippingForm.get('zip').touched"
+                    class="input-error-msg"
+                >
+                Zip/Postal code must be of 6 digits
+                </p>
+            </div>
+            
+            <div>
+                <input
+                    type="number"
+                    placeholder="Phone Number*"
+                    formControlName="phone"
+                    minlength="10"
+                    maxlength="10"
+                />
+                <p
+                    *ngIf="!shippingForm.get('phone').valid && shippingForm.get('phone').touched"
+                    class="input-error-msg"
+                >
+                    Phone no. must be of 10 digits!
+                </p>
+            </div>
+            
         </div>
         <div class="btns-wrap">
             <a class="prev-btn" routerLink="/your-cart">
-            <i class="fa fa-arrow-left"></i>
-            Back To Cart
+                <i class="fa fa-arrow-left"></i>
+                Back To Cart
             </a>
             <button
-            type="submit"
-            class="next-btn"
-            >Complete Order</button>
+                type="submit"
+                class="next-btn"
+                [disabled]="!shippingForm.valid"
+                
+            >
+                Complete Order
+            </button>
         </div>
     </form>
 </div>

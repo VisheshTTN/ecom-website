@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { CartService } from '../cart/cart.service';
@@ -22,14 +22,19 @@ export class ShippingDetailsComponent implements OnInit {
       'addressLine2': new FormControl(null),
       'country': new FormControl(null, Validators.required),
       'city': new FormControl(null, Validators.required),
-      'zip': new FormControl(null, [Validators.required, Validators.minLength(6)]),
-      'phone': new FormControl(null, [Validators.required, Validators.minLength(10), Validators.maxLength(10)])
-    })
+      'zip': new FormControl(null, [Validators.required, Validators.min(100000), Validators.max(999999)]),
+      'phone': new FormControl(null, [Validators.required, Validators.min(1000000000), Validators.max(9999999999)])
+    });
+
+  //   get zip() {
+  //     return this.shippingForm.get('zip');
+  // } 
   }
 
   onCompleteOrder() {
-    this.cartService.clearCart();
-    this.router.navigate(['/order-complete']);
+    // this.cartService.clearCart();
+    // this.router.navigate(['/order-complete']);
+    console.log(this.shippingForm);
   }
 
 }

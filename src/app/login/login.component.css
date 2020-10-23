@@ -39,6 +39,12 @@ form {
     font-size: 0.9rem;
 }
 
+.input-error-msg {
+    text-align: left;
+    margin: 3px 0 10px 0 !important;
+    color: #ff0019;
+}
+
 button {
     margin-top: 10px;
     padding: 10px 20px;
@@ -56,11 +62,16 @@ button:hover {
     cursor: pointer;
 }
 
+button:disabled {
+    cursor: not-allowed;
+    background: #a3a3a3;
+}
+
 .form-container p {
     margin-top: 20px;
 }
 
-.form-container p:first-of-type{
+.login-error-msg{
     color: #ff0019;
 }
 

@@ -10,9 +10,9 @@
             </div>  
         </a>
         <div>
-            <a href="" routerLink="/your-cart" *ngIf="product.quantity; else addToCartBtn" class="check-btn">
+            <button (click)="onGoToCart()" *ngIf="product.inCart; else addToCartBtn" class="check-btn">
                 <i class="fa fa-check check-icon" aria-hidden="true"></i>
-            </a>
+            </button>
             <ng-template #addToCartBtn>
                 <button (click)="addToCart(product.id)" class="add-btn">
                     <div>+</div>
@@ -22,5 +22,6 @@
         </div>
         
     </div>
+    <app-pop-up *ngIf="showPopup" [show]="showPopup" (closePopup)="closePopup()" ></app-pop-up>
 </div>
 

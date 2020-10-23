@@ -11,7 +11,12 @@
                 class="form-control"
                 formControlName="name"
             />
-            
+            <p 
+                *ngIf="!signupForm.get('name').valid && signupForm.get('name').touched" 
+                class="input-error-msg"
+            >
+                This field is required!
+            </p>
             <input
                 type="text"
                 id="email"
@@ -19,7 +24,12 @@
                 class="form-control"
                 formControlName="email"
             />
-            
+            <p 
+                *ngIf="!signupForm.get('email').valid && signupForm.get('email').touched" 
+                class="input-error-msg"
+            >
+                Please enter a valid email!
+            </p>
             <input
                 type="password"
                 id="password"
@@ -27,14 +37,19 @@
                 class="form-control"
                 formControlName="password"
             />
-            
+            <p 
+                *ngIf="!signupForm.get('password').valid && signupForm.get('password').touched" 
+                class="input-error-msg"
+            >
+                This field is required!
+            </p>
             <div>
-                <button class="btn btn-primary" type="submit">Submit</button>
+                <button class="btn btn-primary" type="submit" [disabled]="!signupForm.valid">Submit</button>
             </div>
             
         </form>
-        <p>{{ message }}</p>
+        <p class="signup-error-msg">{{ message }}</p>
         <p>Already Registered? <a href="#" routerLink="/login">Login</a></p>
     </div>
-
+    <app-toaster *ngIf="showToaster" [toasterMessage]="'Signup successful! Login To Continue'"></app-toaster>
 </div>

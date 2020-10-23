@@ -13,7 +13,7 @@
             <div>
                 <button class="cart-btn" (click)="onAddToCart(product.id)" *ngIf="!product.quantity; else goToCart" >ADD TO CART</button>
                 <ng-template #goToCart>   
-                    <a href="" class="cart-btn" routerLink="/your-cart">GO TO CART</a>
+                    <button (click)="onGoToCart()" class="cart-btn" >GO TO CART</button>
                 </ng-template>
                 
             </div>
@@ -26,5 +26,5 @@
         de recusandae hic quia ab distinctio dolorum, eos sit non pariatur sequi ipsam quibusdam aliquam iste. Incidunt adipisci maxime minus voluptas unde voluptatibus quam et soluta temporibus. Consequatur, quasi provident?
         animi libero? Ipsa id vero asperiores at ullam eum inventore illo obcaecati maiores? Aspernatur tenetur qui nam amet, eos nobis quibusdam sequi consequatur perspiciatis, voluptas necessitatibus! Asperiores, aperiam quam.</p>
     </div>
-
+    <app-pop-up *ngIf="showPopup" [show]="showPopup" (closePopup)="closePopup()" ></app-pop-up>
 </div>

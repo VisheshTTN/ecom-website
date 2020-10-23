@@ -30,6 +30,15 @@ input[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none;
 }
 
+input.ng-invalid.ng-touched {
+    border: 1px solid #ff0000 !important;
+}
+
+.input-error-msg {
+    color: #ff0000;
+    margin-top: 3px;
+}
+
 .prev-btn {
     border: 1px solid #adadad;
     padding: 0.8rem 2rem;
@@ -37,14 +46,6 @@ input[type="number"]::-webkit-outer-spin-button {
     position: relative;
     outline: none;
     margin-right: 10px;
-}
-
-.prev-btn:hover,
-.next-btn:hover {
-    transform: translate(-5px, -5px);
-    transition: all 0.6s;
-    box-shadow: 10px 10px 2px 1px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
 }
 
 .prev-btn i {
@@ -77,6 +78,22 @@ input[type="number"]::-webkit-outer-spin-button {
     font-size: 1.1rem;
     cursor: pointer;
     outline: none;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+    transform: translate(-5px, -5px);
+    transition: all 0.6s;
+    box-shadow: 10px 10px 2px 1px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.next-btn:disabled {
+    cursor: not-allowed;
+    background: #a3a3a3;
+    border: none;
+    transform: none;
+    box-shadow: none;
 }
 
 a {

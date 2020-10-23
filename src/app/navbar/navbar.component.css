@@ -53,8 +53,31 @@ a {
     border-bottom: 1px solid #df4550;
 }
 
+.nav-links li button {
+    font-size: 1.3rem;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+.nav-links li button:hover {
+    cursor: pointer;
+    color: #df4550;
+}
+
 .nav-cart {
     position: relative;
+}
+
+.nav-cart button {
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+.nav-cart button:hover {
+    cursor: pointer;
+    color: #df4550;
 }
 
 .nav-cart i {

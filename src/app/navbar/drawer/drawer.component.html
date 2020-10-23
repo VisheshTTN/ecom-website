@@ -12,10 +12,10 @@
         <li><a href="" class="nav-item" >About</a></li>
         <li><a href="" class="nav-item" >Help</a></li>
         <li routerLinkActive="active">
-            <a *ngIf="!loggedIn; logout" href="#" class="nav-item" routerLink="/signup">Login/Signup</a>
-            <ng-template #logout>
+            <a href="#" class="nav-item" routerLink="/signup">Login/Signup</a>
+            <!-- <ng-template #logout>
                 <a href="#" class="nav-item" routerLink="/signup">Logout</a>
-            </ng-template>
+            </ng-template> -->
         </li>
       </ul>
     </div>

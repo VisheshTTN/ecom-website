@@ -1,0 +1,9 @@
+.toaster {
+    position: fixed;
+    bottom: 2%;
+    right: 1%;
+    z-index: 200;
+    background: #0ab10a;
+    color: #fff;
+    padding: 20px 30px;
+}

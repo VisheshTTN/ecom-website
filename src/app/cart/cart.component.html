@@ -3,17 +3,33 @@
     
     <div class="order-container" *ngIf="cart.length; else emptyCart">
         <div class="product-box">
-        <div style="display: flex; flex-direction: column;">
             <div class="product" *ngFor="let product of cart">
-                <div class="product-container">
-                    <img [src]="product.img" alt=""/>
-                    <div class="product-details">
-                        <h3>{{ product.name }}</h3>
-                        <span>Price:</span> <h3>Rs {{ product.price }}</h3>
+                <div class="cart-item" >
+                    <div class="product-container">
+                        <img [src]="product.img" alt=""/>
+                        <div class="product-details">
+                            <h3>{{ product.name }}</h3>
+                            <span>Price:</span> <h3>Rs {{ product.price }}</h3>
+                        </div>
+                    </div>
+                    <div class="quantity-container">
+                        <button class="qty-btn" (click)="onDecreaseQuantity(product.id)" >-</button>
+                        <div class="quantity">
+                            {{product.quantity}}
+                        </div>
+                        <button class="qty-btn" (click)="onIncreaseQuantity(product.id)" >+</button>
                     </div>
                 </div>
+                <div>
+                    <button
+                        class="remove-btn"
+                        (click)="removeProduct(product.id)"
+                    >
+                        <i class="fa fa-times"></i>
+                        <div>Remove</div>
+                    </button>
+                </div>
             </div>
-        </div>
         <div class="proceed-btn" style="text-align: right;">
             <a href="#" routerLink="/shipping-details">Proceed</a>
         </div>
@@ -31,7 +47,7 @@
                     </div>
                 </div>
                 <div class="price">
-                    <h3>Rs. {{ product.price }}</h3>
+                    <h3>Rs. {{ product.price*product.quantity }}</h3>
                 </div>
             </div>
             <div class="price-calculation">

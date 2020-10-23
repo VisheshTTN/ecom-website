@@ -16,6 +16,10 @@ import { ShippingDetailsComponent } from './shipping-details/shipping-details.co
 import { OrderCompleteComponent } from './order-complete/order-complete.component';
 import { LoginComponent } from './login/login.component';
 import { DrawerComponent } from './navbar/drawer/drawer.component';
+import { ToasterComponent } from './toaster/toaster.component';
+import { PopUpComponent } from './pop-up/pop-up.component';
+import { BackdropComponent } from './pop-up/backdrop/backdrop.component';
+import { CookieService } from 'ngx-cookie-service';
 
 @NgModule({
   declarations: [
@@ -31,7 +35,10 @@ import { DrawerComponent } from './navbar/drawer/drawer.component';
     ShippingDetailsComponent,
     OrderCompleteComponent,
     LoginComponent,
-    DrawerComponent
+    DrawerComponent,
+    ToasterComponent,
+    PopUpComponent,
+    BackdropComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +46,7 @@ import { DrawerComponent } from './navbar/drawer/drawer.component';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

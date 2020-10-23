@@ -11,6 +11,12 @@
                 class="form-control"
                 formControlName="email"
             />
+            <p 
+                *ngIf="!loginForm.get('email').valid && loginForm.get('email').touched" 
+                class="input-error-msg"
+            >
+                Please enter a valid email!
+            </p>
             
             <input
                 type="password"
@@ -19,13 +25,19 @@
                 class="form-control"
                 formControlName="password"
             />
+            <p 
+                *ngIf="!loginForm.get('password').valid && loginForm.get('password').touched" 
+                class="input-error-msg"
+            >
+                This field is required!
+            </p>
     
             <div>
-                <button class="btn btn-primary" type="submit">Login</button>
+                <button class="btn btn-primary" type="submit" [disabled]="!loginForm.valid">Login</button>
             </div>
             
         </form>
-        <p>{{ message }}</p>
+        <p class="login-error-msg">{{ message }}</p>
         <p>Didn't sign up yet? <a href="#" routerLink="/signup">Signup</a></p>
     </div>
 </div>

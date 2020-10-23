@@ -28,6 +28,15 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 15px;
+    position: relative;
+}
+
+.cart-item {
+    display: flex; 
+    justify-content: space-between; 
+    width: 100%; 
+    align-items: center;
+    padding: 12px 0;
 }
 
 .product-container {
@@ -42,6 +51,67 @@
 
 .product-details {
     margin-left: 20px;
+}
+
+.quantity-container {
+    width: 15%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.quantity {
+    border: 1px solid #ccc;
+    padding: 3px 6px;
+    font-size: 25px;
+}
+
+.qty-btn {
+    border: none;
+    outline: none;
+    font-size: 30px;
+    background: transparent;
+}
+
+.qty-btn:hover {
+    cursor: pointer;
+    color: #df4550;
+}
+
+.remove-btn {
+    border: none;
+    outline: none;
+    background: #fff;
+    color: #df4550;
+    position: absolute;
+    top: 5px;
+    right: 7px;
+    border-radius: 50%;
+    font-size: 16px;
+    padding: 2px 4px;
+}
+
+.remove-btn  div {
+    position: absolute;
+    top: 0;
+    right: 5px;
+    color: #fff;
+    width: 0;
+    background: #df4550;
+    overflow: hidden;
+    border-radius: 20px;
+    z-index: -1;
+}
+
+.remove-btn:hover {
+    cursor: pointer;
+    color: #fff;
+    background: #df4550;
+}
+
+.remove-btn:hover  div {
+    animation: closeBtn 0.4s;
+    animation-fill-mode: forwards;
 }
 
 .order-summary {
@@ -147,6 +217,18 @@
 
 .empty-cart p a:hover {
     text-decoration: underline;
+}
+
+@keyframes closeBtn {
+    from {
+        width: 0;
+        padding: 0;
+    }
+
+    to {
+        width: 95px;
+        padding: 2px 18px;
+    }
 }
 
 @media(max-width: 768px) {

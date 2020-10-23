@@ -144,12 +144,12 @@ export class ProductsService {
     ]
 
     getProducts() {
-        return this.products;
+        return this.products.slice(0, this.products.length);
     }
 
     getProduct(id: number) {
       const product = this.products.find(p=> p.id == id);
-      return product;
+      return {...product}
     }
 
     getSearchedProducts(name: string) {
@@ -157,5 +157,13 @@ export class ProductsService {
         return product.name.toLowerCase().includes(name.toLowerCase());
       });
       return searchedProducts;
+    }
+
+    setProductInCart(id: number, value: boolean) {
+      this.products.map(product=> {
+        if(product.id===id) {
+          product.inCart = value;
+        }
+      })
     }
 }

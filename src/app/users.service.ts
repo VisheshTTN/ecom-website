@@ -10,7 +10,28 @@ export class UsersService {
         }
     ]
 
-    loggedIn = true;
+    loggedIn = false;
+
+    login(email: string, password: string) {
+        const promise = new Promise(
+            (resolve, reject) => {
+                let authenticated = this.users.find(user=> {
+                    return user.email===email && user.password===password;
+                });
+
+                if(authenticated) {
+                    this.loggedIn = true;
+                    resolve(authenticated);
+                }
+
+                else {
+                    reject({message: 'Invalid Credentials!'})
+                }
+            }
+        )
+
+        return promise;
+    }
 
     checkUserDetails(email: string, password: string) {
         let authenticated = this.users.find(user=> {
@@ -21,14 +42,14 @@ export class UsersService {
             this.loggedIn = true;
         }
 
-        return this.loggedIn;
+        return authenticated;
     }
 
     isAuthenticated() {
         return this.loggedIn;
     }
 
-    addUser(user: {name: string, email: string, password: string }) {
+    addUser(user: {name: string, email: string, password: string}) {
         const promise = new Promise(
             (resolve, reject) => {
                 

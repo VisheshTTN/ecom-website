@@ -1,24 +1,24 @@
 <div class="navbar">
-    <a href="#">
+    <a routerLink="/">
         <h2>LOGO</h2>
     </a>
     <ul class="nav-links">
         <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a href="#" routerLink="/">Home</a></li>
-        <li><a href="">About</a></li>
-        <li><a href="">Help</a></li>
+        <li><a routerLInk="/about">About</a></li>
+        <li><a routerLInk="/help">Help</a></li>
         <li routerLinkActive="active">
-            <a *ngIf="!loggedIn; logout" href="#" routerLink="/signup">Login/Signup</a>
+            <a *ngIf="!loggedIn; else logout" href="#" routerLink="/signup">Login/Signup</a>
             <ng-template #logout>
-                <a href="#" routerLink="/signup">Logout</a>
+                <button (click)="onLogout()">Logout</button>
             </ng-template>
         </li>
         <li class="nav-cart" routerLinkActive="active">
-            <a href="#" routerLink="/your-cart">
+            <button (click)="onGoToCart()">
                 <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                 <div *ngIf="itemsInCart.length" class="cart-dot">
                     <h4>{{ itemsInCart.length }}</h4>
                 </div>
-            </a>
+            </button>
         </li>
     </ul>
     <div *ngIf="!showDrawer" class="menu-bar">
@@ -28,3 +28,4 @@
     </div>
     <app-drawer *ngIf="showDrawer" [closeDrawer]="closeDrawer"></app-drawer>
 </div>
+<app-pop-up *ngIf="showPopup" [show]="showPopup" (closePopup)="closePopup()" ></app-pop-up>
