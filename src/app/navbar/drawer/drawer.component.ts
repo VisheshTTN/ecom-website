@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-drawer',
@@ -7,7 +7,8 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class DrawerComponent implements OnInit {
 
-  @Input() closeDrawer: any;
+  @Input() show: boolean;
+  @Output() closeDrawer = new EventEmitter();
 
   constructor() { }
 
@@ -15,7 +16,7 @@ export class DrawerComponent implements OnInit {
   }
 
   onCloseDrawer() {
-    this.closeDrawer();
-  } // this doesn't work.....
+    this.closeDrawer.emit();
+  }
 
 }

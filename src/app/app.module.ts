@@ -18,8 +18,15 @@ import { LoginComponent } from './login/login.component';
 import { DrawerComponent } from './navbar/drawer/drawer.component';
 import { ToasterComponent } from './toaster/toaster.component';
 import { PopUpComponent } from './pop-up/pop-up.component';
-import { BackdropComponent } from './pop-up/backdrop/backdrop.component';
 import { CookieService } from 'ngx-cookie-service';
+import { BackdropComponent } from './backdrop/backdrop.component';
+import { HttpClient, HttpClientModule, HttpHandler } from '@angular/common/http';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+
+export function rootLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http, '../assets/i18n/', '.json')
+}
 
 @NgModule({
   declarations: [
@@ -44,7 +51,15 @@ import { CookieService } from 'ngx-cookie-service';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: rootLoaderFactory,
+        deps: [HttpClient]
+      }
+    })
   ],
   providers: [CookieService],
   bootstrap: [AppComponent]

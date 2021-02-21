@@ -85,6 +85,33 @@
   img {
     object-fit: contain;
   }
+
+  .language-section {
+    display: grid;
+    justify-content: center;
+    margin: 10px 0;
+  }
+
+  .language-section h4 {
+    font-size: 20px;
+  }
+
+  .language-container {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  .language {
+    list-style: none;
+    padding: 0 5px;
+    color: #df4550;
+  }
+  
+  .language:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
   
   @media (max-width: 768px) {
     .search-form {

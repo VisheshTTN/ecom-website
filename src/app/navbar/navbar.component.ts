@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { CookieService } from 'ngx-cookie-service';
 import { CartService } from '../cart/cart.service';
 import { Product } from '../products/products.interface';
+import { TranslateConfigService } from '../translate-config.service';
 import { UsersService } from '../users.service';
 
 @Component({
@@ -21,7 +22,8 @@ export class NavbarComponent implements OnInit, DoCheck {
     private cartService: CartService, 
     private usersService: UsersService,
     private router: Router,
-    private cookie: CookieService) { }
+    private cookie: CookieService,
+    private translate: TranslateConfigService) { }
 
   ngOnInit(): void {
     this.itemsInCart = this.cartService.getProductsFromCart();
@@ -50,6 +52,10 @@ export class NavbarComponent implements OnInit, DoCheck {
 
   openDrawer() {
     this.showDrawer = true;
+  }
+
+  onCloseDrawer() {
+    this.showDrawer = false;
   }
 
   onLogout() {

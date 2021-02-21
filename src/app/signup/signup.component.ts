@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { TranslateConfigService } from '../translate-config.service';
 import { UsersService } from '../users.service';
 
 @Component({
@@ -13,7 +14,7 @@ export class SignupComponent implements OnInit {
   message = '';
   showToaster = false;
 
-  constructor(private usersService: UsersService) { }
+  constructor(private usersService: UsersService, private transalte: TranslateConfigService) { }
 
   ngOnInit(): void {
     this.signupForm = new FormGroup({

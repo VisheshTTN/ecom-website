@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { CookieService } from 'ngx-cookie-service';
-import { stringify } from 'querystring';
 import { CartService } from '../cart/cart.service';
+import { TranslateConfigService } from '../translate-config.service';
 import { UsersService } from '../users.service';
 
 @Component({
@@ -21,7 +21,8 @@ export class LoginComponent implements OnInit {
     private usersService: UsersService,
     private cartService: CartService, 
     private router: Router,
-    private cookie: CookieService) { }
+    private cookie: CookieService,
+    private translate: TranslateConfigService) { }
     
 
   ngOnInit(): void {

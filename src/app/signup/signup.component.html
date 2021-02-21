@@ -2,54 +2,57 @@
     <div class="overlay"></div>
     <div class="form-container">
         <h1>LOGO</h1>
-        <h3>Sign Up</h3>
+        <h3 translate>signup.heading</h3>
         <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
             <input
                 type="text"
                 id="name"
-                placeholder="Your Name"
+                placeholder="{{'login.name' | translate}}"
                 class="form-control"
                 formControlName="name"
             />
             <p 
                 *ngIf="!signupForm.get('name').valid && signupForm.get('name').touched" 
                 class="input-error-msg"
+                translate
             >
-                This field is required!
+                login.inputErrorMessage
             </p>
             <input
                 type="text"
                 id="email"
-                placeholder="email"
+                placeholder="{{'login.email' | translate}}"
                 class="form-control"
                 formControlName="email"
             />
             <p 
                 *ngIf="!signupForm.get('email').valid && signupForm.get('email').touched" 
                 class="input-error-msg"
+                translate
             >
-                Please enter a valid email!
+                login.emailErrorMessage
             </p>
             <input
                 type="password"
                 id="password"
-                placeholder="Password"
+                placeholder="{{'login.password' | translate}}"
                 class="form-control"
                 formControlName="password"
             />
             <p 
                 *ngIf="!signupForm.get('password').valid && signupForm.get('password').touched" 
                 class="input-error-msg"
+                translate
             >
-                This field is required!
+                login.inputErrorMessage
             </p>
             <div>
-                <button class="btn btn-primary" type="submit" [disabled]="!signupForm.valid">Submit</button>
+                <button class="btn btn-primary" type="submit" [disabled]="!signupForm.valid" translate>signup.actionButtonText</button>
             </div>
             
         </form>
         <p class="signup-error-msg">{{ message }}</p>
-        <p>Already Registered? <a href="#" routerLink="/login">Login</a></p>
+        <p translate>signup.ifRegistered <a href="#" routerLink="/login" translate>login.actionButtonText</a></p>
     </div>
     <app-toaster *ngIf="showToaster" [toasterMessage]="'Signup successful! Login To Continue'"></app-toaster>
 </div>

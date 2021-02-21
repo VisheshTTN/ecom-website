@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
 import { AuthGuard } from './auth-guard.service';
 import { CartComponent } from './cart/cart.component';
 import { HomeComponent } from './home/home.component';

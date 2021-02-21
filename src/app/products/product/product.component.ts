@@ -61,9 +61,7 @@ export class ProductComponent implements OnInit {
   }
 
   closePopup() {
-    console.log('here');
     this.showPopup = false;
-    console.log(this.showPopup);
   }
 
 }

@@ -1,0 +1,33 @@
+{
+    "navbar": {
+        "home": "Home",
+        "about": "About",
+        "help": "Help",
+        "login": "Login/Signup",
+        "logout": "Logout",
+        "camera": "en_camera"
+    },
+    "login": {
+        "name": "Your Name",
+        "email": "Your Email",
+        "password": "Your Password",
+        "inputErrorMessage": "This field is required!",
+        "emailErrorMessage": "Please enter a valid email!",
+        "actionButtonText": "Login",
+        "loginErrorMessage": "Invalid Credentials!",
+        "ifNotRegistered": "Didn't sign up yet?"
+    },
+    "signup": {
+        "heading": "Sign Up",
+        "actionButtonText": "Submit",
+        "ifRegistered": "Already Registered?"
+    },
+    "home": {
+        "tagline": "Whatever you’ve got in mind, we’ve got inside.",
+        "language": "We are available in following languages.",
+        "search": "Search"
+    },
+    "footer": {
+        "text":"All Copyrights Reserved"
+    }
+}

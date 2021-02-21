@@ -1,0 +1,33 @@
+{   
+    "navbar": {
+        "home": "Hogar",
+        "about": "Sobre",
+        "help": "Ayuda",
+        "login": "Acceso/Inscribirse",
+        "logout": "Cerrar sesión",
+        "camera": "es_camera"
+    },
+    "login": {
+        "name": "Tu nombre",
+        "email": "Tu correo electrónico",
+        "password": "Tu contraseña",
+        "inputErrorMessage": "Este campo es obligatorio!",
+        "emailErrorMessage": "Por favor introduzca una dirección de correo electrónico válida!",
+        "actionButtonText": "Acceso",
+        "loginErrorMessage": "Credenciales no válidas!",
+        "ifNotRegistered": "Aún no te registraste?"
+    },
+    "signup": {
+        "heading": "Inscribirse",
+        "actionButtonText": "Enviar",
+        "ifRegistered": "Ya registrado?"
+    },
+    "home": {
+        "tagline": "Lo que sea que tengas en mente, lo tenemos adentro.",
+        "language": "Estamos disponibles en los siguientes idiomas.",
+        "search": "Buscar"
+    },
+    "footer": {
+        "text": "Todos los derechos de autor reservados"
+    }
+}

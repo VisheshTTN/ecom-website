@@ -2,42 +2,45 @@
     <div class="overlay"></div>
     <div class="form-container">
         <h1>LOGO</h1>
-        <h3>Login</h3>
+        <h3 translate>login.actionButtonText</h3>
         <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
             <input
+                translate
                 type="text"
                 id="email"
-                placeholder="email"
-                class="form-control"
+                placeholder="{{'login.email' | translate}}"
+                class="form-control" 
                 formControlName="email"
             />
             <p 
                 *ngIf="!loginForm.get('email').valid && loginForm.get('email').touched" 
                 class="input-error-msg"
+                translate
             >
-                Please enter a valid email!
+                login.emailErrorMessage
             </p>
             
             <input
                 type="password"
                 id="password"
-                placeholder="Password"
+                placeholder="{{'login.password' | translate}}"
                 class="form-control"
                 formControlName="password"
             />
             <p 
                 *ngIf="!loginForm.get('password').valid && loginForm.get('password').touched" 
                 class="input-error-msg"
+                translate
             >
-                This field is required!
+                login.inputErrorMessage
             </p>
     
             <div>
-                <button class="btn btn-primary" type="submit" [disabled]="!loginForm.valid">Login</button>
+                <button class="btn btn-primary" type="submit" [disabled]="!loginForm.valid" translate>login.actionButtonText</button>
             </div>
             
         </form>
         <p class="login-error-msg">{{ message }}</p>
-        <p>Didn't sign up yet? <a href="#" routerLink="/signup">Signup</a></p>
+        <p translate>login.ifNotRegistered <a href="#" routerLink="/signup" translate>signup.heading</a></p>
     </div>
 </div>

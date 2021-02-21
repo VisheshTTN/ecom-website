@@ -2,8 +2,8 @@
     <header class="showcase">
         <div class="container center">
             <div class="showcase-content">
-                <p class="tagline">
-                    Whatever you’ve got in mind, we’ve got inside.
+                <p class="tagline" translate>
+                    home.tagline
                 </p>
                 <div class="bottom-line"></div>
                 <form
@@ -13,14 +13,15 @@
                 >
                     <input
                     type="text"
-                    placeholder="Search"
+                    placeholder="{{'home.search' | translate}}"
                     required
                     formControlName='search'
                     />
                     <button
                     type="submit"
                     class="main-btn search-btn"
-                    >Search</button>
+                    translate
+                    >home.search</button>
                 </form>
             </div>
         </div>
@@ -29,5 +30,12 @@
     <section>
         <app-products></app-products>
     </section>
-
+    <div class="language-section">
+        <h4 translate>home.language</h4>
+    
+        <ul class="language-container">
+            <li class="language" (click)="changeLanguage('en')">English</li>
+            <li class="language" (click)="changeLanguage('es')">Spanish</li>
+        </ul>
+    </div>
 </div>
