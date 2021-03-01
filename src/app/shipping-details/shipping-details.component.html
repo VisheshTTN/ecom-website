@@ -1,54 +1,57 @@
 <div class="container">
-    <h3>SHIPPING DETAILS</h3>
+    <h3 translate>shippingDetails.heading</h3>
 
     <form [formGroup]="shippingForm" (ngSubmit)="onCompleteOrder()">
         <div class="address-form grid-form">
             <div>
                 <input
                     type="text"
-                    placeholder="First Name*"
+                    placeholder="{{'shippingDetails.firstName' | translate}}*"
                     formControlName="firstname"
                 />
                 <p
                     *ngIf="!shippingForm.get('firstname').valid && shippingForm.get('firstname').touched"
                     class="input-error-msg"
+                    translate
                 >
-                    This field is required!
+                    shippingDetails.inputErrorMessage
                 </p>
             </div>
             
             <div>
                 <input
                     type="text"
-                    placeholder="Last Name*"
+                    placeholder="{{'shippingDetails.lastName' | translate}}*"
                     formControlName="lastname"
                 />
                 <p
                     *ngIf="!shippingForm.get('lastname').valid && shippingForm.get('lastname').touched"
                     class="input-error-msg"
+                    translate
                 >
-                    This field is required!
+                    shippingDetails.inputErrorMessage
                 </p>
             </div>
             
             <div>
                 <input
                 type="text"
-                placeholder="Address Line 1*"
+                placeholder="{{'shippingDetails.addressLine1' | translate}}*"
                 formControlName="addressLine1"
                 />
                 <p
                     *ngIf="!shippingForm.get('addressLine1').valid && shippingForm.get('addressLine1').touched"
                     class="input-error-msg"
+                    translate
                 >
-                    This field is required!
+                    shippingDetails.inputErrorMessage
                 </p>
             </div>
             
             <div>
                 <input
                 type="text"
-                placeholder="Address Line 2"
+                placeholder="{{'shippingDetails.addressLine2' | translate}}"
                 formControlName="addressLine2"
             />
             </div>
@@ -56,49 +59,52 @@
             <div>
                 <input
                 type="text"
-                placeholder="Country*"
+                placeholder="{{'shippingDetails.country' | translate}}*"
                 formControlName="country"
                 />
                 <p
                     *ngIf="!shippingForm.get('country').valid && shippingForm.get('country').touched"
                     class="input-error-msg"
+                    translate
                 >
-                    This field is required!
+                    shippingDetails.inputErrorMessage
                 </p>
             </div>
             
             <div>
                 <input
                     type="text"
-                    placeholder="City*"
+                    placeholder="{{'shippingDetails.city' | translate}}*"
                     formControlName="city"
                 />
                 <p
                     *ngIf="!shippingForm.get('city').valid && shippingForm.get('city').touched"
                     class="input-error-msg"
+                    translate
                 >
-                This field is required!
+                shippingDetails.inputErrorMessage
                 </p>
             </div>
             
             <div>
                 <input
                     type="number"
-                    placeholder="Zip/Postal Code*"
+                    placeholder="{{'shippingDetails.zip' | translate}}*"
                     formControlName="zip"
                 />
                 <p
                     *ngIf="!shippingForm.get('zip').valid && shippingForm.get('zip').touched"
                     class="input-error-msg"
+                    translate
                 >
-                Zip/Postal code must be of 6 digits
+                    shippingDetails.zipErrorMessage
                 </p>
             </div>
             
             <div>
                 <input
                     type="number"
-                    placeholder="Phone Number*"
+                    placeholder="{{'shippingDetails.phone' | translate}}*"
                     formControlName="phone"
                     minlength="10"
                     maxlength="10"
@@ -106,23 +112,25 @@
                 <p
                     *ngIf="!shippingForm.get('phone').valid && shippingForm.get('phone').touched"
                     class="input-error-msg"
+                    translate
                 >
-                    Phone no. must be of 10 digits!
+                    shippingDetails.phoneErrorMessage
                 </p>
             </div>
             
         </div>
         <div class="btns-wrap">
-            <a class="prev-btn" routerLink="/your-cart">
+            <a class="prev-btn" routerLink="/your-cart" translate>
                 <i class="fa fa-arrow-left"></i>
-                Back To Cart
+                shippingDetails.secondaryActionButtonText
             </a>
             <button
                 type="submit"
                 class="next-btn"
                 [disabled]="!shippingForm.valid"
+                translate
             >
-                Complete Order
+                shippingDetails.primaryActionButtonText
             </button>
         </div>
     </form>

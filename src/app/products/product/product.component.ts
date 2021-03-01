@@ -16,6 +16,7 @@ export class ProductComponent implements OnInit {
   thumbImg: string;
   loggedIn: boolean;
   showPopup = false;
+  isProductInCart = false;
 
   constructor(
     private productsService: ProductsService, 
@@ -33,6 +34,10 @@ export class ProductComponent implements OnInit {
         this.thumbImg = this.product.img;
       }
     )
+
+    if(this.cartService.productsInCart.filter(productInCart=> productInCart.id===this.product.id).length) {
+      this.isProductInCart = true;
+    }
   }
 
   onChangeImage(id: number) {
@@ -43,7 +48,7 @@ export class ProductComponent implements OnInit {
   onAddToCart(id: number) {
     this.loggedIn = this.usersService.isAuthenticated();
     this.cartService.addProductToCart(id);
-
+    this.isProductInCart = true;
     if(!this.loggedIn) {
       this.showPopup = true;
     }

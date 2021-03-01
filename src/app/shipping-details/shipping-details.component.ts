@@ -32,9 +32,8 @@ export class ShippingDetailsComponent implements OnInit {
   }
 
   onCompleteOrder() {
-    // this.cartService.clearCart();
-    // this.router.navigate(['/order-complete']);
-    console.log(this.shippingForm);
+    this.cartService.clearCart();
+    this.router.navigate(['/order-complete']);
   }
 
 }

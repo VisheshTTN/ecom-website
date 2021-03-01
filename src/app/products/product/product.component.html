@@ -6,21 +6,21 @@
         </div>
     </div>
     <div class="product-info">
-        <h1>{{ product.name }}</h1>
+        <h1 translate>{{ product.name }}</h1>
         <hr/>
         <div class="shop">
             <h2>Rs. {{ product.price }} </h2>
             <div>
-                <button class="cart-btn" (click)="onAddToCart(product.id)" *ngIf="!product.quantity; else goToCart" >ADD TO CART</button>
+                <button class="cart-btn" (click)="onAddToCart(product.id)" *ngIf="!isProductInCart; else goToCart" translate >cart.addToCartButtonText</button>
                 <ng-template #goToCart>   
-                    <button (click)="onGoToCart()" class="cart-btn" >GO TO CART</button>
+                    <button (click)="onGoToCart()" class="cart-btn" translate >cart.goToCartButtonText</button>
                 </ng-template>
                 
             </div>
         </div>
         
         <hr/>
-        <h3>Product Description</h3>
+        <h3 translate>product.productDescriptionHeading</h3>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi, laboriosam. Placeat perspiciatis numquam libero iste veniam dolores blanditiis perferendis quis ullam voluptatum, odio architecto obcaecati, aliquam vel voluptatibus autem unde?
         Maiores doloremque quas laboriosam voluptates, aperiam molestiae quam placeat dolorem debitis reiciendis! Quis vero, molestias impedit debitis totam nesciunt modi perspiciatis sit aut ipsam, nam omnis recusandae architecto sint? Perferendis?
         de recusandae hic quia ab distinctio dolorum, eos sit non pariatur sequi ipsam quibusdam aliquam iste. Incidunt adipisci maxime minus voluptas unde voluptatibus quam et soluta temporibus. Consequatur, quasi provident?

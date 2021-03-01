@@ -27,6 +27,57 @@
         "language": "Estamos disponibles en los siguientes idiomas.",
         "search": "Buscar"
     },
+    "product": {
+        "camera": "Cámara",
+        "tv": "Televisión",
+        "phone": "Teléfono Móvil",
+        "laptop": "Ordenador portátil",
+        "ps": "PS4",
+        "fridge": "Refrigerador",
+        "productDescriptionHeading": "Descripción del producto"
+    },
+    "cart": {
+        "heading": "Su Carrito",
+        "price": "Precio",
+        "addToCartButtonText": "AÑADIR AL CARRITO",
+        "goToCartButtonText": "IR AL CARRITO",
+        "removeButtonText": "Eliminar",
+        "actionButtonText": "Continuar",
+        "emptyCartMessage": "Tu carrito esta vacío",
+        "emptyCartActionText": "Buscar Productos",
+        "addedToCart": "Agregado al carrito",
+        "orderSummary": {
+            "heading": "Resumen de la orden",
+            "quantity": "CANTIDAD",
+            "subtotal": "TOTAL PARCIAL",
+            "delivery": "ENTREGA",
+            "discount": "DESCUENTO",
+            "total": "TOTAL"
+        }
+    },
+    "shippingDetails": {
+        "heading": "DETALLES DE ENVÍO",
+        "firstName": "Nombre de pila",
+        "lastName": "Apellido",
+        "addressLine1": "Dirección Línea 1",
+        "addressLine2": "Dirección Línea 2",
+        "country": "País",
+        "city": "Ciudad",
+        "zip": "Código Postal",
+        "phone": "Número de Teléfono",
+        "primaryActionButtonText": "Orden Completa",
+        "secondaryActionButtonText": "Volver Al Carrito",
+        "inputErrorMessage": "Este campo es obligatorio!",
+        "zipErrorMessage": "El código postal debe tener 6 dígitos!",
+        "phoneErrorMessage": "Telefono no. debe tener 10 dígitos!"
+    },
+    "orderComplete": {
+        "heading": "Su orden ha sido puesta.",
+        "actionButtonText": "Seguir comprando"
+    },
+    "popup": {
+        "message": "Por favor inicie sesión para continuar!"
+    },
     "footer": {
         "text": "Todos los derechos de autor reservados"
     }

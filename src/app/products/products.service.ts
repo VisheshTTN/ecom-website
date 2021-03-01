@@ -5,7 +5,7 @@ export class ProductsService {
     private products = [
         {
           "id": 1,
-          "name": "Camera",
+          "name": "product.camera",
           "price": 400,
           "category": "electronics",
           "img": "https://rukminim1.flixcart.com/image/416/416/jydaqa80/dslr-camera/x/k/4/eos-eos-3000d-canon-original-imafgmjmcf2gjxfn.jpeg?q=70",
@@ -28,7 +28,7 @@ export class ProductsService {
         },
         {
           "id": 2,
-          "name": "Television",
+          "name": "product.tv",
           "price": 200,
           "category": "electronics",
           "img": "https://rukminim1.flixcart.com/image/416/416/k9u8zgw0/television/d/t/k/mi-l32m5-al-original-imafrjtbngu9hrwz.jpeg?q=70",
@@ -51,7 +51,7 @@ export class ProductsService {
         },
         {
           "id": 3,
-          "name": "Phone",
+          "name": "product.phone",
           "price": 100,
           "category": "electronics",
           "img": "https://rukminim1.flixcart.com/image/416/416/jm9hfgw0/mobile/g/h/c/apple-iphone-xs-mt9f2hn-a-original-imaf97f6zzfkzjcz.jpeg?q=70",
@@ -74,7 +74,7 @@ export class ProductsService {
         },
         {
           "id": 4,
-          "name": "Laptop",
+          "name": "product.laptop",
           "price": 500,
           "category": "electronics",
           "img": "https://rukminim1.flixcart.com/image/416/416/k7285u80/computer/x/w/m/acer-original-imafpdyeeyndtnn3.jpeg?q=70",
@@ -97,7 +97,7 @@ export class ProductsService {
         },
         {
           "id": 5,
-          "name": "PS4",
+          "name": "product.ps",
           "price": 300,
           "category": "electronics",
           "img": "https://rukminim1.flixcart.com/image/416/416/k33c4nk0/gamingconsole/s/g/g/1-ps4-slim-sony-yes-dualshock-4-original-imafmakaeu7xvz6a.jpeg?q=70",
@@ -120,7 +120,7 @@ export class ProductsService {
         },
         {
           "id": 6,
-          "name": "Fridge",
+          "name": "product.fridge",
           "price": 100,
           "category": "electronics",
           "img": "https://rukminim1.flixcart.com/image/416/416/k0bbb0w0/refrigerator-new/t/n/z/gl-d201abpy-5-lg-original-imafk4zzgzfdyzzf.jpeg?q=70",

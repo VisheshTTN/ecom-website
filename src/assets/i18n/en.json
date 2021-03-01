@@ -27,6 +27,57 @@
         "language": "We are available in following languages.",
         "search": "Search"
     },
+    "product": {
+        "camera": "Camera",
+        "tv": "Television",
+        "phone": "Phone",
+        "laptop": "Laptop",
+        "ps": "PS4",
+        "fridge": "Fridge",
+        "productDescriptionHeading": "Product Description"
+    },
+    "cart": {
+        "heading": "Your Cart",
+        "price": "Price",
+        "addToCartButtonText": "ADD TO CART",
+        "goToCartButtonText": "GO TO CART",
+        "removeButtonText": "Remove",
+        "actionButtonText": "Proceed",
+        "emptyCartMessage": "Your Cart is empty",
+        "emptyCartActionText": "Browse Prodducts",
+        "addedToCart": "Added to cart",
+        "orderSummary": {
+            "heading": "Order Summary",
+            "quantity": "Quantity",
+            "subtotal": "SUBTOTAL",
+            "delivery": "DELIVERY",
+            "discount": "DISCOUNT",
+            "total": "TOTAL"
+        }
+    },
+    "shippingDetails": {
+        "heading": "SHIPPING DETAILS",
+        "firstName": "First Name",
+        "lastName": "Last Name",
+        "addressLine1": "Address Line 1",
+        "addressLine2": "Address Line 2",
+        "country": "Country",
+        "city": "City",
+        "zip": "Zip/Postal Code",
+        "phone": "Phone Number",
+        "primaryActionButtonText": "Complete Order",
+        "secondaryActionButtonText": "Back To Cart",
+        "inputErrorMessage": "This field is required!",
+        "zipErrorMessage": "Zip/Postal code must be of 6 digits!",
+        "phoneErrorMessage": "Phone no. must be of 10 digits!"
+    },
+    "orderComplete": {
+        "heading": "Your Order has been placed.",
+        "actionButtonText": "Continue Shopping"
+    },
+    "popup": {
+        "message": "Please login to continue!"
+    },
     "footer": {
         "text":"All Copyrights Reserved"
     }

@@ -1,5 +1,5 @@
 <div class="container">
-    <h2>Your Cart</h2>
+    <h2 translate>cart.heading</h2>
     
     <div class="order-container" *ngIf="cart.length; else emptyCart">
         <div class="product-box">
@@ -8,8 +8,8 @@
                     <div class="product-container">
                         <img [src]="product.img" alt=""/>
                         <div class="product-details">
-                            <h3>{{ product.name }}</h3>
-                            <span>Price:</span> <h3>Rs {{ product.price }}</h3>
+                            <h3 translate>{{ product.name }}</h3>
+                            <span translate>cart.price</span>: <h3>Rs {{ product.price }}</h3>
                         </div>
                     </div>
                     <div class="quantity-container">
@@ -26,24 +26,24 @@
                         (click)="removeProduct(product.id)"
                     >
                         <i class="fa fa-times"></i>
-                        <div>Remove</div>
+                        <div translate>cart.removeButtonText</div>
                     </button>
                 </div>
             </div>
         <div class="proceed-btn" style="text-align: right;">
-            <a href="#" routerLink="/shipping-details">Proceed</a>
+            <a href="#" routerLink="/shipping-details" translate>cart.actionButtonText</a>
         </div>
         </div>
         
         <div class="order-summary">
-            <h3>Order Summary</h3>
+            <h3 translate>cart.orderSummary.heading</h3>
             <div class="order-container" *ngFor="let product of cart"> 
                 <div class="product-container" >
                     <img [src]="product.img" alt=""/>
                     <div class="product-details">
-                        <h3>{{ product.name }}</h3>
-                        <p>Quantity: {{ product.quantity }}</p>
-                        <p>Price: Rs. {{ product.price }}</p>
+                        <h3 translate>{{ product.name }}</h3>
+                        <p translate>cart.orderSummary.quantity<span>:</span> {{ product.quantity }}</p>
+                        <p translate>cart.price<span>:</span> Rs. {{ product.price }}</p>
                     </div>
                 </div>
                 <div class="price">
@@ -53,9 +53,9 @@
             <div class="price-calculation">
                 <div>
                     <div>
-                        <p>SUBTOTAL</p>
-                        <p>DELIVERY</p>
-                        <p>DISCOUNT</p>
+                        <p translate>cart.orderSummary.subtotal</p>
+                        <p translate>cart.orderSummary.delivery</p>
+                        <p translate>cart.orderSummary.discount</p>
                     </div>    
                     <div>
                         <p>Rs {{ cartValue }}</p>
@@ -64,7 +64,7 @@
                     </div>
                 </div>
                 <div class="total-price">
-                    <p>TOTAL</p>
+                    <p translate>cart.orderSummary.total</p>
                     <p>Rs. {{ cartValue }}</p>
                 </div>
                 
@@ -76,6 +76,6 @@
 
 <ng-template #emptyCart>
     <div class="empty-cart">
-        <p>Your Cart is empty.....<a href="" routerLink="/">Browse Products</a> </p>
+        <p translate>cart.emptyCartMessage<span>....</span><a href="" routerLink="/" translate>cart.emptyCartActionText</a> </p>
     </div>
 </ng-template>

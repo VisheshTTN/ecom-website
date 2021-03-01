@@ -42,7 +42,6 @@ export class CartService {
     removeProductFromCart(id: number) {
         this.productsService.setProductInCart(id, false);
         this.productsInCart.splice(this.productsInCart.findIndex(product=> product.id===id), 1);
-        console.log(this.productsInCart);
     }
 
     decreaseProductQuantity(id: number) {
